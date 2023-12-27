@@ -32,7 +32,6 @@ test('between addresses +@mobile +@dark-mode', async({ mount, page }) => {
   await page.getByText('View details').click();
 
   await expect(component).toHaveScreenshot({
-    mask: [ page.locator(configs.adsBannerSelector) ],
     maskColor: configs.maskColor,
   });
 });
@@ -51,7 +50,6 @@ test('creating contact', async({ mount, page }) => {
   );
 
   await expect(component).toHaveScreenshot({
-    mask: [ page.locator(configs.adsBannerSelector) ],
     maskColor: configs.maskColor,
   });
 });
@@ -70,7 +68,6 @@ test('with token transfer +@mobile', async({ mount, page }) => {
   );
 
   await expect(component).toHaveScreenshot({
-    mask: [ page.locator(configs.adsBannerSelector) ],
     maskColor: configs.maskColor,
   });
 });
@@ -89,7 +86,6 @@ test('with decoded revert reason', async({ mount, page }) => {
   );
 
   await expect(component).toHaveScreenshot({
-    mask: [ page.locator(configs.adsBannerSelector) ],
     maskColor: configs.maskColor,
   });
 });
@@ -108,7 +104,6 @@ test('with decoded raw reason', async({ mount, page }) => {
   );
 
   await expect(component).toHaveScreenshot({
-    mask: [ page.locator(configs.adsBannerSelector) ],
     maskColor: configs.maskColor,
   });
 });
@@ -129,7 +124,6 @@ test('pending', async({ mount, page }) => {
   await page.getByText('View details').click();
 
   await expect(component).toHaveScreenshot({
-    mask: [ page.locator(configs.adsBannerSelector) ],
     maskColor: configs.maskColor,
   });
 });
@@ -148,7 +142,6 @@ test('with actions uniswap +@mobile +@dark-mode', async({ mount, page }) => {
   );
 
   await expect(component).toHaveScreenshot({
-    mask: [ page.locator(configs.adsBannerSelector) ],
     maskColor: configs.maskColor,
   });
 });
@@ -172,7 +165,6 @@ l2Test('l2', async({ mount, page }) => {
   );
 
   await expect(component).toHaveScreenshot({
-    mask: [ page.locator(configs.adsBannerSelector) ],
     maskColor: configs.maskColor,
   });
 });
@@ -198,7 +190,6 @@ mainnetTest('without testnet warning', async({ mount, page }) => {
   );
 
   await expect(component).toHaveScreenshot({
-    mask: [ page.locator(configs.adsBannerSelector) ],
     maskColor: configs.maskColor,
   });
 });
@@ -222,7 +213,6 @@ stabilityTest('stability customization', async({ mount, page }) => {
   );
 
   await expect(component).toHaveScreenshot({
-    mask: [ page.locator(configs.adsBannerSelector) ],
     maskColor: configs.maskColor,
   });
 });

@@ -48,9 +48,8 @@ test.describe('default view', () => {
     );
   });
 
-  test('-@default +@dark-mode', async({ page }) => {
+  test('-@default +@dark-mode', async() => {
     await expect(component).toHaveScreenshot({
-      mask: [ page.locator(configs.adsBannerSelector) ],
       maskColor: configs.maskColor,
     });
   });
@@ -58,9 +57,8 @@ test.describe('default view', () => {
   test.describe('screen xl', () => {
     test.use({ viewport: configs.viewport.xl });
 
-    test('', async({ page }) => {
+    test('', async() => {
       await expect(component).toHaveScreenshot({
-        mask: [ page.locator(configs.adsBannerSelector) ],
         maskColor: configs.maskColor,
       });
     });
@@ -93,7 +91,6 @@ test.describe('custom hero plate background', () => {
     const heroPlate = component.locator('div[data-label="hero plate"]');
 
     await expect(heroPlate).toHaveScreenshot({
-      mask: [ page.locator(configs.adsBannerSelector) ],
       maskColor: configs.maskColor,
     });
   });
@@ -135,7 +132,6 @@ test.describe('mobile', () => {
     );
 
     await expect(component).toHaveScreenshot({
-      mask: [ page.locator(configs.adsBannerSelector) ],
       maskColor: configs.maskColor,
     });
   });

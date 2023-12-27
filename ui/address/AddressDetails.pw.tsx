@@ -46,7 +46,6 @@ test('contract +@mobile', async({ mount, page }) => {
   );
 
   await expect(component).toHaveScreenshot({
-    mask: [ page.locator(configs.adsBannerSelector) ],
     maskColor: configs.maskColor,
   });
 });
@@ -89,7 +88,6 @@ test('token', async({ mount, page }) => {
   );
 
   await expect(component).toHaveScreenshot({
-    mask: [ page.locator(configs.adsBannerSelector) ],
     maskColor: configs.maskColor,
   });
 });
@@ -112,7 +110,6 @@ test('validator +@mobile', async({ mount, page }) => {
   );
 
   await expect(component).toHaveScreenshot({
-    mask: [ page.locator(configs.adsBannerSelector) ],
     maskColor: configs.maskColor,
   });
 });

@@ -8,8 +8,6 @@ export const viewport = {
 
 export const maskColor = '#4299E1'; // blue.400
 
-// export const adsBannerSelector = '.adsbyslise';
-
 export const featureEnvs = {
   beaconChain: [
     { name: 'NEXT_PUBLIC_HAS_BEACON_CHAIN', value: 'true' },
