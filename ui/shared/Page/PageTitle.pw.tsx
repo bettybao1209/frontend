@@ -6,7 +6,6 @@ import TestApp from 'playwright/TestApp';
 
 import DefaultView from './specs/DefaultView';
 import LongNameAndManyTags from './specs/LongNameAndManyTags';
-import WithTextAd from './specs/WithTextAd';
 
 test.beforeEach(async({ page }) => {
   await page.route('https://request-global.czilladx.com/serve/native.php?z=19260bf627546ab7242', (route) => route.fulfill({
@@ -31,16 +30,6 @@ test('default view +@mobile', async({ mount }) => {
   const component = await mount(
     <TestApp>
       <DefaultView/>
-    </TestApp>,
-  );
-
-  await expect(component).toHaveScreenshot();
-});
-
-test('with text ad +@mobile', async({ mount }) => {
-  const component = await mount(
-    <TestApp>
-      <WithTextAd/>
     </TestApp>,
   );
 
