@@ -9,7 +9,7 @@ import config from 'configs/app';
 import useApiQuery, { getResourceKey } from 'lib/api/useApiQuery';
 import { useAppContext } from 'lib/contexts/app';
 import * as cookies from 'lib/cookies';
-import { nbsp, ndash } from 'lib/html-entities';
+// import { nbsp, ndash } from 'lib/html-entities';
 import useSocketChannel from 'lib/socket/useSocketChannel';
 import useSocketMessage from 'lib/socket/useSocketMessage';
 
@@ -66,16 +66,17 @@ const IndexingBlocksAlert = () => {
     return hasAlertCookie ? <Skeleton h={{ base: '96px', lg: '48px' }} w="100%"/> : null;
   }
 
-  if (data.finished_indexing_blocks !== false) {
-    return null;
-  }
+  // if (data.finished_indexing_blocks !== false) {
+  //   return null;
+  // }
 
   return (
-    <Alert status="info" colorScheme="gray" py={ 3 } borderRadius="md">
+    <Alert status="info" background="#EEF6F4" py={ 3 } borderRadius="md">
       <AlertIcon display={{ base: 'none', lg: 'flex' }}/>
       <AlertTitle>
-        { `${ data.indexed_blocks_ratio && `${ Math.floor(Number(data.indexed_blocks_ratio) * 100) }% Blocks Indexed${ nbsp }${ ndash } ` }
-          We're indexing this chain right now. Some of the counts may be inaccurate.` }
+        { /* { `${ data.indexed_blocks_ratio && `${ Math.floor(Number(data.indexed_blocks_ratio) * 100) }% Blocks Indexed${ nbsp }${ ndash } ` }
+          We're indexing this chain right now. Some of the counts may be inaccurate.` } */ }
+          Please be aware ! This NeoX devnet is in the internal testing phase, all data will be cleared.
       </AlertTitle>
     </Alert>
   );
