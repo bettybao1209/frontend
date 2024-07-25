@@ -6,12 +6,15 @@ import type { SocketMessage } from 'lib/socket/types';
 import type { IndexingStatus } from 'types/api/indexingStatus';
 
 import config from 'configs/app';
+import { getEnvValue } from 'configs/app/utils';
 import useApiQuery, { getResourceKey } from 'lib/api/useApiQuery';
 import { useAppContext } from 'lib/contexts/app';
 import * as cookies from 'lib/cookies';
 // import { nbsp, ndash } from 'lib/html-entities';
 import useSocketChannel from 'lib/socket/useSocketChannel';
 import useSocketMessage from 'lib/socket/useSocketMessage';
+
+const networkId = getEnvValue('NEXT_PUBLIC_NETWORK_ID');
 
 const IndexingBlocksAlert = () => {
   const appProps = useAppContext();
@@ -55,6 +58,10 @@ const IndexingBlocksAlert = () => {
   });
 
   if (config.UI.indexingAlert.blocks.isHidden) {
+    return null;
+  }
+
+  if (Number(networkId) !== 2407101928) {
     return null;
   }
 
