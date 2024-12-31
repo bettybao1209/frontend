@@ -5,7 +5,7 @@ import { route } from 'nextjs-routes';
 
 import config from 'configs/app';
 import iconPlaceholder from 'icons/networks/icon-placeholder.svg';
-import logoPlaceholder from 'icons/networks/logo-placeholder.svg';
+import logoPlaceholder from 'icons/networks/logo-placeholder.png';
 
 interface Props {
   isCollapsed?: boolean;
