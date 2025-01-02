@@ -5,7 +5,7 @@ import { route } from 'nextjs-routes';
 
 import config from 'configs/app';
 import iconPlaceholder from 'icons/networks/icon-placeholder.svg';
-import logoPlaceholder from 'icons/networks/logo-placeholder.png';
+import logoPlaceholder from 'icons/networks/logo-placeholder.svg';
 
 interface Props {
   isCollapsed?: boolean;
@@ -42,7 +42,6 @@ const LogoFallback = ({ isCollapsed, isSmall }: { isCollapsed?: boolean; isSmall
 };
 
 const NetworkLogo = ({ isCollapsed, onClick }: Props) => {
-
   const logoSrc = useColorModeValue(config.UI.sidebar.logo.default, config.UI.sidebar.logo.dark || config.UI.sidebar.logo.default);
   const iconSrc = useColorModeValue(config.UI.sidebar.icon.default, config.UI.sidebar.icon.dark || config.UI.sidebar.icon.default);
   const darkModeFilter = { filter: 'brightness(0) invert(1)' };
